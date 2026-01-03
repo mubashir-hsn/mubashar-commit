@@ -1,0 +1,299 @@
+
+export const SKILL_CATEGORIES = [
+  {
+    title: "Programming",
+    icon: "code",
+    skills: ["C++", "JavaScript", "PHP", "SQL"]
+  },
+  {
+    title: "Frontend",
+    icon: "monitor",
+    skills: ["HTML/CSS", "React.js", "Next.js", "Tailwind CSS", "Bootstrap"]
+  },
+  {
+    title: "Backend",
+    icon: "database",
+    skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "PHP", "REST APIs"]
+  },
+  {
+    title: "Specialized",
+    icon: "cpu",
+    skills: ["UI/UX Design", "AI Integration", "NextAuth / JWT", "Git & GitHub"]
+  }
+];
+
+export const PROJECTS = [
+    {
+        "id": "c9f3xk2lv",
+        "name": "Careerly - AI Career Coach",
+        "category": "AI",
+        "description": "Careerly is an AI-powered career coach offering smart interview prep, personalized cover letters, resume building & analysis, and real-time job market insights.",
+        "thumbnail": "/careerlyfiles/c1.png",
+        "images": [
+            "/careerlyfiles/c1.png",
+            "/careerlyfiles/c2.png",
+            "/careerlyfiles/c3.png",
+            "/careerlyfiles/c4.png",
+            "/careerlyfiles/c5.png",
+            "/careerlyfiles/c6.png",
+            "/careerlyfiles/c7.png",
+            "/careerlyfiles/c8.png"
+        ],
+        "features": [
+            "AI-powered industrial insights",
+            "Interactive AI chatbot for career guidance",
+            "Cover letter generator using Gemini API",
+            "AI-powered Resume Analysis and ATS Scoring with detailed suggestions for skills, structure, summary, etc",
+            "Smart resume builder with ATS optimization"
+        ],
+        "technologies": ["Next.js", "Inngest", "Prisma", "Neon", "Gemini API", "shadcn/ui"],
+        "githubLink": "https://github.com/mubashir-hsn/careerly",
+        "livePreview": "https://careerly-ashen.vercel.app/"
+    },
+    {
+        "id": "litefit_7f3a9x1",
+        "name": "LiteFit – Modern E-Commerce",
+        "category": "Full Stack",
+        "description": "LiteFit is a modern, full-stack MERN e-commerce platform designed for selling men's and women's clothing online. It provides users with a sleek shopping experience, secure payments via Stripe, personalized product recommendations, and a beautiful responsive UI built with React and Tailwind CSS.",
+        "thumbnail": "/litefitfiles/e4.png",
+        "images": [
+            "/litefitfiles/e1.png",
+            "/litefitfiles/e2.png",
+            "/litefitfiles/e3.png",
+            "/litefitfiles/e4.png",
+            "/litefitfiles/e5.png",
+            "/litefitfiles/e6.png",
+            "/litefitfiles/e7.png",
+            "/litefitfiles/e8.png",
+            "/litefitfiles/e9.png",
+            "/litefitfiles/e10.png"
+        ],
+        "features": [
+          "User Authentication & Authorization (JWT-based)",
+          "Add to Cart and Checkout System",
+          "Stripe Payment Gateway Integration",
+          "Order Management System",
+          "Admin Dashboard for Analytics (using Chart.js)",
+          "User Dashboard for Orders & Payments",
+          "Product Filtering (by Category, Price, and Color)",
+          "Cloudinary Image Management",
+          "Responsive UI for All Devices",
+          "SweetAlert & Toast Notifications",
+          "Modern Animations using AOS"
+        ],
+        "technologies": ["React.js", "Node.js", "Express.js", "MongoDB", "Stripe", "Cloudinary"],
+        "githubLink": "https://github.com/mubashir-hsn/LiteFit",
+        "livePreview": "https://lite-fit.vercel.app/"
+    },
+    {
+        "id": "imusic_9t6b2f4",
+        "name": "iMusic – Courses UI",
+        "category": "Frontend",
+        "description": "iMusic is a modern and elegant UI design concept that showcases music-related courses in a visually appealing layout. Built with Next.js, TypeScript, Aceternity UI, and ShadCN for a smooth and responsive experience.",
+        "thumbnail": "/imusic/m1.png",
+        "images": [
+            "/imusic/m1.png",
+            "/imusic/m2.png",
+            "/imusic/m3.png",
+            "/imusic/m4.png",
+            "/imusic/m5.png"
+        ],
+        "features": [
+            "Modern elegant UI",
+            "Fast performance with Next.js",
+            "Fully responsive design",
+            "Reusable UI components"
+        ],
+        "technologies": ["Next.js", "Aceternity UI", "ShadCN UI", "Tailwind CSS"],
+        "githubLink": "https://github.com/mubashir-hsn/imusic",
+        "livePreview": ""
+    },
+    {
+        "id": "stayzio_9d5r8q2",
+        "name": "Stayzio – Blog Platform",
+        "category": "Full Stack",
+        "description": "Stayzio is a modern blog platform that enables users to read, write, and manage blogs effortlessly. It includes an admin panel for content moderation, user management, and blog analytics. The platform focuses on clean UI, performance, and enhance user experience .",
+        "thumbnail": "/blogfiles/s1.png",
+        "images": [
+            "/blogfiles/s1.png",
+            "/blogfiles/s2.png",
+            "/blogfiles/s3.png",
+            "/blogfiles/s4.png",
+            "/blogfiles/s5.png"
+        ],
+        "features": [
+          "User Authentication",
+          "Create, Edit, and Delete Blog Posts",
+          "Search Blog and Related Blogs",
+          "Comment System with Real-Time Updates",
+          "Responsive UI for All Devices"
+        ],
+        "technologies": ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
+        "githubLink": "https://github.com/mubashir-hsn/Stayzio",
+        "livePreview": ""
+    },
+    {
+        "id": "anonify_6m9p2d7",
+        "name": "Anonify – Feedback Platform",
+        "category": "Full Stack",
+        "description": "Anonify is a modern Next.js-based platform that allows users to receive anonymous feedback securely. Users can sign up with NextAuth credentials, verify their email, and share their unique link to get messages or feedback anonymously from others..",
+        "images":[
+          "/anonify/s1.png",
+          "/anonify/s2.png",
+          "/anonify/s3.png",
+          "/anonify/s4.png"
+      ],
+      "thumbnail":"/anonify/s1.png",
+      "features": [
+        "User authentication with NextAuth credentials",
+        "Email verification after signup",
+        "Unique user link for receiving feedback",
+        "Receive and delete anonymous messages",
+        "Update status for accepting messages",
+        "Anonymous users can send feedback without revealing identity",
+        "Responsive and secure user interface"
+      ],
+        "technologies": ["Next.js", "NextAuth", "MongoDB", "Mongoose", "Tailwind CSS"],
+        "githubLink": "https://github.com/mubashir-hsn/anonymous",
+        "livePreview": ""
+    },
+    {
+        "id": "ai_resume_analyzer_01",
+        "name": "RESUMIND - AI Resume Analyzer",
+        "category": "AI",
+        "description": "RESUMIND  is a Vite-powered web app that allows users to upload and analyze resumes using AI. It calculates ATS scores, highlights strengths and weaknesses, and provides section-wise tips for improvement—covering skills, structure, summary, and more. Built with React Router and Puter.js for seamless routing and secure authentication.",
+        "thumbnail": "/resumefiles/r5.png",
+        "images": [
+            "/resumefiles/r1.png",
+            "/resumefiles/r2.png",
+            "/resumefiles/r3.png",
+            "/resumefiles/r4.png",
+            "/resumefiles/r5.png"
+        ],
+        "features": [
+          "AI-powered Resume Analysis and ATS Scoring",
+          "Detailed Suggestions for Skills, Structure, Summary, etc.",
+          "Resume Upload with Drag-and-Drop Support (PDF)",
+          "User Authentication and Resume Processing via Puter.js",
+          "Fast and Modular Frontend with Vite + React Router"
+      ],
+        "technologies": ["React.js", "Puter.js", "Tailwind CSS", "Zustand", "Vite"],
+        "githubLink": "https://github.com/mubashir-hsn/ai-resume-analyzer",
+        "livePreview": "https://ai-resume-analyzer-delta-two.vercel.app"
+    },
+    {
+        "id": "ichat_4k8s1r9",
+        "name": "iChat – Messaging App",
+        "category": "Full Stack",
+        "description": "iChat is a modern real-time chat application built with the MERN stack. It allows users to create accounts, browse and chat instantly with other users, and manage their profile including changing their password. The app ensures data security and provides a smooth messaging experience with Socket.IO.",
+        "thumbnail": "/chatfiles/i3.png",
+        "images": [
+            "/chatfiles/i1.png",
+            "/chatfiles/i2.png",
+            "/chatfiles/i3.png",
+            "/chatfiles/i4.png",
+            "/chatfiles/i5.png"
+        ],
+        "features": [
+            "User Registration and Login (JWT-based Authentication)",
+            "Real-Time One-to-One Messaging using Socket.IO",
+            "Search User By Name",
+            "Chat Notification Sound On each Message",
+            "Change Password and Profile Update Functionality",
+            "Online/Offline User Status Indicators",
+            "Chat History Persistence in MongoDB",
+            "Responsive Chat UI with Tailwind CSS",
+            "Secure Password Hashing using BcryptJS",
+            "Logout and Session Handling via Cookies",
+            "Zustand for state management"
+        ],
+        "technologies": ["React.js", "Node.js", "Socket.IO", "Express.js", "MongoDB"],
+        "githubLink": "https://github.com/mubashir-hsn/iChat",
+        "livePreview": ""
+    },
+    {
+        "id": "quizapp_7h4t2v9",
+        "name": "Quizora – Management System",
+        "category": "PHP",
+        "description": "uizora is a web-based system built with PHP, MySQL, jQuery, and Bootstrap that allows students to take quizzes and view results, while admins can manage quizzes, courses, and students through an intuitive dashboard.",
+        "thumbnail": "/quizora/q2.png",
+        "images": [
+            "/quizora/q0.png",
+            "/quizora/q2.png",
+            "/quizora/q1.png",
+            "/quizora/q5.png",
+            "/quizora/q6.png",
+            "/quizora/q7.png",
+            "/quizora/q8.png",
+            "/quizora/q3.png"
+        ],
+        "features": [
+            "User registration and login",
+            "Interactive student dashboard",
+            "Take quizzes and view results",
+            "Profile management for users",
+            "Admin login and dashboard",
+            "Manage students, courses, and quizzes",
+            "Add questions and view performance",
+            "Responsive and modern UI"
+        ],
+        "technologies": ["PHP", "MySQL", "jQuery", "Bootstrap 5"],
+        "githubLink": "https://github.com/mubashir-hsn/quiz_app",
+        "livePreview": ""
+    },
+    {
+        "id": "cheezybite_5n8r3x7",
+        "name": "CheezyBite – Food Ordering Web App",
+        "category": "PHP",
+        "description": "CheezyBite is a dynamic food ordering website built using PHP, MySQL, and Bootstrap. It allows users to browse food items, view details, and place online orders through an easy-to-use and responsive interface.",
+        "thumbnail": "/cheezybite/c1.png",
+        "images": [
+            "/cheezybite/c2.png",
+            "/cheezybite/c3.png",
+            "/cheezybite/c1.png",
+            "/cheezybite/c5.png",
+            "/cheezybite/c6.png",
+            "/cheezybite/c7.png",
+            "/cheezybite/c8.png",
+            "/cheezybite/c9.png",
+            "/cheezybite/c10.png"
+        ],
+        "features": [
+            "Browse food categories and items",
+            "View dish details",
+            "Add to cart and place orders",
+            "View order confirmation and history",
+            "User login and registration",
+            "Responsive layout for all devices"
+        ],
+        "technologies": ["PHP", "MySQL", "Bootstrap", "JavaScript"],
+        "githubLink": "https://github.com/mubashir-hsn/cheezybite",
+        "livePreview": "https://cheezybite.infinityfree.me"
+    }
+];
+
+export const WORK_EXPERIENCE = [
+  {
+    id: 1,
+    role: "Backend Developer",
+    company: "Appexify Solution",
+    duration: "2024 - 2025",
+    description: "Architected scalable backend systems, optimized database queries, and implemented robust API integrations for enterprise clients."
+  },
+  {
+    id: 2,
+    role: "UI/UX & MERN Intern",
+    company: "SFH",
+    duration: "2023 - 2024",
+    description: "Developed full-stack projects using the MERN stack and designed intuitive user interfaces, improving user retention."
+  }
+];
+
+export const EDUCATION = [
+  {
+    id: 1,
+    degree: "BS Software Engineering",
+    institution: "PMAS - Arid University, Rawalpindi",
+    duration: "2022 - 2026"
+  }
+];
