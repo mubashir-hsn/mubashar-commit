@@ -55,7 +55,7 @@ const About = () => {
             </div>
 
             <div className="mt-12 flex items-center gap-6">
-               <a href="../public/CV_Mubashar.pdf" download className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-zinc-900 text-xs font-black uppercase tracking-widest rounded-2xl hover:bg-orange-500 dark:hover:bg-orange-500 dark:hover:text-white transition-all shadow-xl">
+               <a href="/CV_Mubashar.pdf" download className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-zinc-900 text-xs font-black uppercase tracking-widest rounded-2xl hover:bg-orange-500 dark:hover:bg-orange-500 dark:hover:text-white transition-all shadow-xl">
                  Download CV
                </a>
             </div>
