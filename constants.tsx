@@ -1,23 +1,23 @@
 export const SKILL_CATEGORIES = [
   {
-    title: "Programming",
+    title: "Languages",
     icon: "code",
-    skills: ["C++", "JavaScript", "PHP", "SQL"],
+    skills: ["JavaScript", "TypeScript", "C++", "PHP", "SQL"],
   },
   {
     title: "Frontend",
     icon: "monitor",
-    skills: ["HTML/CSS", "React.js", "Next.js", "Tailwind CSS", "Bootstrap"],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "HTML/CSS"],
   },
   {
     title: "Backend",
     icon: "database",
-    skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "PHP", "REST APIs"],
+    skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "REST APIs"],
   },
   {
-    title: "Specialized",
+    title: "Tools & Tech",
     icon: "cpu",
-    skills: ["Git & GitHub", "AI Integration", "JWT", "NextAuth", "Zod"],
+    skills: ["Git & GitHub", "Prisma", "NextAuth", "JWT", "AI Integration"],
   },
 ];
 
@@ -366,21 +366,13 @@ export const WORK_EXPERIENCE = [
     company: "Webguru",
     duration: "Feb 16, 2026 - Present",
     description:
-      "Worked on Shopify app development, building features like popups and a smartbar builder. Handled full backend development using Remix and MongoDB, including API design and data management. Also contributed as a Smartbar frontend developer, implementing dynamic UI components, and worked on Next.js.",
+      "Built full-stack features for Shopify apps using Remix and MongoDB. I handled backend APIs and database management. I also worked on frontend projects using Next.js.",
   },
   {
     id: 2,
-    role: "Backend Developer",
-    company: "Appexify Solution",
-    duration: "May 2025 - Aug 2025",
-    description:
-      "Architected scalable backend systems, optimized database queries, and implemented robust API integrations for enterprise clients.",
-  },
-  {
-    id: 3,
-    role: "UI/UX & MERN Intern",
+    role: "MERN Intern",
     company: "SFH",
-    duration: "Oct 2024 - Jan 2025",
+    duration: "May 2024 - Aug 2025",
     description:
       "Developed full-stack projects using the MERN stack and designed intuitive user interfaces, improving user retention.",
   },
