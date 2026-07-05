@@ -145,6 +145,7 @@ export const PROJECTS = [
       "Smart ATS-friendly resume builder",
       "AI mock interview preparation system",
       "AI cover letter generator using Gemini API",
+      "AI Portfolio Builder",
       "User dashboard with profile and activity management",
       "Token-based AI usage system",
       "Subscription plans with premium feature access",
