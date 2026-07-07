@@ -170,6 +170,42 @@ export const PROJECTS = [
     livePreview: "https://careerly-j397.vercel.app/",
   },
   {
+    id: "apiforge_7k3m9x1",
+    name: "APIForge – API Testing Platform",
+    category: "Full Stack",
+    description:
+      "APIForge is a full stack API testing and collaboration platform that allows developers to build, test, organize, and debug API requests from a single workspace. It provides secure authentication, workspace management, collections, request execution, and history tracking for a streamlined API development workflow.",
+    thumbnail: "/apiforge/a3.png",
+    images: [
+      "/apiforge/a1.png",
+      "/apiforge/a2.png",
+      "/apiforge/a3.png",
+      "/apiforge/a4.png",
+    ],
+    features: [
+      "JWT Authentication with Secure Login and Registration",
+      "Create and Manage Shared Workspaces",
+      "Role Based Member Management",
+      "Organize API Requests into Collections",
+      "Save and Execute HTTP API Requests",
+      "Support for Headers, Query Parameters, and Request Body",
+      "Execution History Tracking",
+      "Responsive Dashboard with Modern UI",
+    ],
+    technologies: [
+      "React.js",
+      "Vite",
+      "Tailwind CSS",
+      "Zustand",
+      "FastAPI",
+      "SQLAlchemy",
+      "JWT",
+      "SQLite"
+    ],
+    githubLink: "https://github.com/mubashir-hsn/APIForge",
+    livePreview: "",
+  },
+  {
     id: "anonify_6m9p2d7",
     name: "Anonify – Feedback Platform",
     category: "Full Stack",
