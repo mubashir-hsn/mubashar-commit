@@ -29,46 +29,46 @@ const App = () => {
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
   const links = [
-    {name:'EMAIL' , url: 'https://mail.google.com/mail/?view=cm&fs=1&to=cmubashar369@gmail.com'},
-    {name:'GITHUB' , url: 'https://github.com/mubashir-hsn'},
-    {name:'LINKEDIN' , url: 'https://www.linkedin.com/in/mubashir-hsn'},
+    { name: 'EMAIL', url: 'https://mail.google.com/mail/?view=cm&fs=1&to=cmubashar369@gmail.com' },
+    { name: 'GITHUB', url: 'https://github.com/mubashir-hsn' },
+    { name: 'LINKEDIN', url: 'https://www.linkedin.com/in/mubashir-hsn' },
   ]
   return (
     <>
-      <CustomCursor/>
+      <CustomCursor />
       <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 transition-colors duration-300 font-sans">
-      <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects onOpenModal={(project) => setSelectedProject(project)} />
-        <Timeline />
-        <Contact />
-      </main>
+        <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
-      <footer className="py-20 bg-white dark:bg-zinc-900 border-t border-slate-100 dark:border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-3xl font-black text-orange-500 mb-8 tracking-tighter">MUBASHAR.</div>
-          <div className="flex justify-center gap-10 mb-12">
-            {links.map(link => (
-              <a key={link.name} href={link.url} target="_blank" className="text-slate-400 dark:text-zinc-500 hover:text-orange-500 transition-all text-xs font-black uppercase tracking-widest">
-                {link.name}
-              </a>
-            ))}
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects onOpenModal={(project) => setSelectedProject(project)} />
+          <Timeline />
+          <Contact />
+        </main>
+
+        <footer className="py-20 bg-white dark:bg-zinc-900 border-t border-slate-100 dark:border-zinc-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="text-3xl font-black text-orange-500 mb-8 tracking-tighter">MUBASHAR.</div>
+            <div className="flex justify-center gap-10 mb-12">
+              {links.map(link => (
+                <a key={link.name} href={link.url} target="_blank" className="text-slate-400 dark:text-zinc-500 hover:text-orange-500 transition-all text-xs font-black uppercase tracking-widest">
+                  {link.name}
+                </a>
+              ))}
+            </div>
+            <p className="text-slate-500 dark:text-zinc-600 text-[10px] font-bold uppercase tracking-[0.3em]">
+              © {new Date().getFullYear()} Mubashar Hassan — Handcrafted with precision.
+            </p>
           </div>
-          <p className="text-slate-500 dark:text-zinc-600 text-[10px] font-bold uppercase tracking-[0.3em]">
-            © {new Date().getFullYear()} Mubashar Hassan — Handcrafted with precision.
-          </p>
-        </div>
-      </footer>
+        </footer>
 
-      <ProjectModal 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
-      />
-    </div>
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      </div>
     </>
   );
 };

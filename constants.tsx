@@ -7,12 +7,12 @@ export const SKILL_CATEGORIES = [
   {
     title: "Frontend",
     icon: "monitor",
-    skills: ["React.js", "Next.js", "Tailwind CSS"],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap", "Shadcn UI"],
   },
   {
     title: "Backend",
     icon: "database",
-    skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "REST APIs"],
+    skills: ["Node.js", "Express.js", "FastAPI", "MongoDB", "MySQL", "REST APIs"],
   },
   {
     title: "Tools & Tech",

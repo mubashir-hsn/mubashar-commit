@@ -5,7 +5,7 @@ const CustomCursor = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [particles, setParticles] = useState([]);
-  
+
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
 

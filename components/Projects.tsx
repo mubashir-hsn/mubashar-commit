@@ -43,11 +43,10 @@ const Projects = ({ onOpenModal }) => {
               <button
                 key={cat}
                 onClick={() => handleFilterChange(cat)}
-                className={`px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
-                  filter === cat
+                className={`px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${filter === cat
                     ? 'bg-orange-500 text-white shadow-lg shadow-orange-100 dark:shadow-none'
                     : 'bg-white dark:bg-zinc-800 text-slate-400 hover:text-orange-500 border border-slate-100 dark:border-zinc-700'
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -71,9 +70,8 @@ const Projects = ({ onOpenModal }) => {
                 return (
                   <motion.div
                     key={project.id}
-                    className={`absolute w-[80%] max-w-[320px] md:max-w-[420px] bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden border border-slate-100 dark:border-zinc-700 shadow-xl flex flex-col ${
-                      isActive ? 'cursor-pointer shadow-2xl dark:shadow-orange-900/20 z-30' : 'cursor-pointer z-10'
-                    }`}
+                    className={`absolute w-[80%] max-w-[320px] md:max-w-[420px] bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden border border-slate-100 dark:border-zinc-700 shadow-xl flex flex-col ${isActive ? 'cursor-pointer shadow-2xl dark:shadow-orange-900/20 z-30' : 'cursor-pointer z-10'
+                      }`}
                     onClick={() => {
                       if (isActive) onOpenModal(project);
                       else setCurrentIndex(idx);
@@ -142,11 +140,10 @@ const Projects = ({ onOpenModal }) => {
               <button
                 onClick={handlePrev}
                 disabled={currentIndex === 0}
-                className={`absolute left-2 sm:left-4 md:left-8 z-40 p-3 sm:p-4 rounded-full border-2 transition-all duration-300 ${
-                  currentIndex === 0
+                className={`absolute left-2 sm:left-4 md:left-8 z-40 p-3 sm:p-4 rounded-full border-2 transition-all duration-300 ${currentIndex === 0
                     ? 'border-slate-100 dark:border-zinc-800/80 text-slate-300 dark:text-zinc-600 cursor-not-allowed bg-white/50 dark:bg-zinc-900/50 backdrop-blur-md'
                     : 'border-slate-200 dark:border-zinc-600 text-slate-600 dark:text-zinc-300 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md hover:bg-orange-500 hover:border-orange-500 hover:text-white dark:hover:bg-orange-500 shadow-lg hover:shadow-orange-500/25 cursor-pointer'
-                }`}
+                  }`}
               >
                 <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
               </button>
@@ -154,11 +151,10 @@ const Projects = ({ onOpenModal }) => {
               <button
                 onClick={handleNext}
                 disabled={currentIndex === filteredProjects.length - 1}
-                className={`absolute right-2 sm:right-4 md:right-8 z-40 p-3 sm:p-4 rounded-full border-2 transition-all duration-300 ${
-                  currentIndex === filteredProjects.length - 1
+                className={`absolute right-2 sm:right-4 md:right-8 z-40 p-3 sm:p-4 rounded-full border-2 transition-all duration-300 ${currentIndex === filteredProjects.length - 1
                     ? 'border-slate-100 dark:border-zinc-800/80 text-slate-300 dark:text-zinc-600 cursor-not-allowed bg-white/50 dark:bg-zinc-900/50 backdrop-blur-md'
                     : 'border-slate-200 dark:border-zinc-600 text-slate-600 dark:text-zinc-300 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md hover:bg-orange-500 hover:border-orange-500 hover:text-white dark:hover:bg-orange-500 shadow-lg hover:shadow-orange-500/25 cursor-pointer'
-                }`}
+                  }`}
               >
                 <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
               </button>
