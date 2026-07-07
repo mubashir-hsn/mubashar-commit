@@ -67,13 +67,56 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Floating Accent */}
-        <div className="mt-24 p-12 bg-slate-800 dark:bg-zinc-900 rounded-[3rem] text-center relative overflow-hidden group">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-          <h4 className="text-white text-2xl md:text-3xl font-black tracking-tight mb-4 relative z-10">Continually evolving with the industry.</h4>
-          <p className="text-zinc-400 text-sm font-medium max-w-xl mx-auto relative z-10">
-            Technology moves fast. I prioritize lifelong learning and regular adaptation to the latest industry standards and frameworks.
-          </p>
+        {/* Premium Showcase Banner */}
+        <div className="mt-24 relative rounded-[3rem] overflow-hidden group">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-[url('/it.webp')] md:bg-fixed bg-cover bg-center"
+          />
+          {/* Dark Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-950/90 via-zinc-900/80 to-orange-950/70" />
+          {/* Animated Floating Orbs */}
+          <div className="absolute top-10 left-10 w-32 h-32 bg-orange-500/20 rounded-full blur-[60px] animate-pulse pointer-events-none" />
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-500/15 rounded-full blur-[80px] animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-orange-400/10 rounded-full blur-[40px] animate-pulse pointer-events-none" style={{ animationDelay: '2s' }} />
+          {/* Subtle Grid Pattern */}
+          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+          {/* Content */}
+          <div className="relative z-10 px-6 sm:px-12 md:px-20 py-16 md:py-24 flex flex-col items-center text-center gap-10">
+            {/* Glowing Badge */}
+            <div className="px-5 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm">
+              <span className="text-orange-400 text-[10px] font-black uppercase tracking-[0.35em]">🚀 Always Learning</span>
+            </div>
+
+            {/* Main Heading */}
+            <h4 className="text-white text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter leading-tight max-w-3xl">
+              Continually evolving <br className="hidden sm:block" />
+              <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-orange-500 bg-clip-text text-transparent">with the industry.</span>
+            </h4>
+
+            {/* Subtext */}
+            <p className="text-zinc-400 text-sm sm:text-base font-medium max-w-xl mx-auto leading-relaxed">
+              Technology moves fast. I prioritize lifelong learning and regular adaptation to the latest industry standards and frameworks.
+            </p>
+
+            {/* Stats Row */}
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-4">
+              {[
+                { value: '11+', label: 'Projects Built' },
+                { value: '1+', label: 'Years Experience' },
+                { value: '10+', label: 'Technologies' },
+              ].map((stat) => (
+                <div key={stat.label} className="px-6 py-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/40 hover:bg-white/10 transition-all duration-500 min-w-[130px]">
+                  <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">{stat.value}</div>
+                  <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Gradient Fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-zinc-950/50 to-transparent pointer-events-none" />
         </div>
       </div>
     </section>
