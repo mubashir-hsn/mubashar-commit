@@ -167,7 +167,7 @@ export const PROJECTS = [
       "shadcn/ui",
     ],
     githubLink: "https://github.com/mubashir-hsn/careerly",
-    livePreview: "https://careerly-j397.vercel.app/",
+    livePreview: "https://careerly-ai-career-coach.vercel.app/",
   },
   {
     id: "apiforge_7k3m9x1",
