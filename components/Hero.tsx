@@ -66,7 +66,7 @@ const Hero = () => {
 
             {/* Short Cards (Badges) positioned on top of the big card */}
             <div className="absolute top-8 -right-8 p-6 bg-white dark:bg-zinc-900 shadow-2xl rounded-3xl border border-slate-100 dark:border-zinc-800 rotate-6 float z-20" style={{ animationDelay: '1s' }}>
-              <div className="text-3xl font-black text-orange-500">12+</div>
+              <div className="text-3xl font-black text-orange-500">10+</div>
               <div className="text-[9px] font-black uppercase tracking-widest text-slate-400">Projects</div>
             </div>
 

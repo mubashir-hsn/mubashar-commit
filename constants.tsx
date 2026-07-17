@@ -414,19 +414,19 @@ export const PROJECTS = [
 export const WORK_EXPERIENCE = [
   {
     id: 1,
-    role: "Backend Engineer Intern",
-    company: "Webguru",
-    duration: "Feb 16, 2026 - Present",
+    role: "Backend Intern",
+    company: "Web Guru",
+    location: "Sahiwal (On-site)",
+    duration: "Feb 2026 – May 2026",
     description:
-      "Built full-stack features for Shopify apps using Remix and MongoDB. I handled backend APIs and database management. I also worked on frontend projects using Next.js.",
-  },
-  {
-    id: 2,
-    role: "MERN Intern",
-    company: "SFH",
-    duration: "May 2024 - Aug 2025",
-    description:
-      "Developed full-stack projects using the MERN stack and designed intuitive user interfaces, improving user retention.",
+      "Built and shipped production-ready Shopify apps and client websites, working across the full stack with Remix, Next.js, and Shopify APIs.",
+    highlights: [
+      "Built and shipped \"Shopfly,\" a Shopify app (Remix framework) that lets merchants install and enable on-store popups, smart bars, and coupon campaigns directly from their Shopify admin, without writing code.",
+      "Engineered core app logic using the Shopify GraphQL Admin API and metafields to store and sync merchant-specific configurations (popup rules, smart bar content, coupon settings) per store.",
+      "Implemented Shopify webhook handling for app lifecycle events (install/uninstall) and merchant data synchronization.",
+      "Designed and built the complete UI in Next.js for a separate client website (Cheggl, a video-streaming-related platform) converting Figma designs into responsive, production-ready interfaces.",
+      "Collaborated with senior developers in an agile workflow, participating in code reviews and daily standups.",
+    ],
   },
 ];
 
@@ -436,5 +436,13 @@ export const EDUCATION = [
     degree: "BS Software Engineering",
     institution: "PMAS - Arid University, Rawalpindi",
     duration: "2022 - 2026",
+    relevantCourses: [
+      "Data Structures & Algorithms",
+      "Object Oriented Programming",
+      "Database Systems",
+      "Web Engineering",
+      "Software Design & Architecture",
+      "Operating Systems",
+    ],
   },
 ];

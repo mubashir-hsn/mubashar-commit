@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { Briefcase, GraduationCap, MapPin, Calendar, ChevronRight } from 'lucide-react';
 import { WORK_EXPERIENCE, EDUCATION } from '../constants';
 
 const timelineEvents = [
@@ -8,15 +8,19 @@ const timelineEvents = [
     role: job.role,
     company: job.company,
     period: job.duration,
+    location: job.location || '',
     description: job.description,
-    type: 'work',
+    highlights: job.highlights || [],
+    type: 'work' as const,
   })),
   ...EDUCATION.map((edu) => ({
     role: edu.degree,
     company: edu.institution,
     period: edu.duration,
+    location: '',
     description: '',
-    type: 'edu',
+    highlights: [] as string[],
+    type: 'edu' as const,
   })),
 ];
 
@@ -44,7 +48,6 @@ export default function Timeline() {
             style={{
               left: box.left,
               top: box.top,
-              // Initial 3D placement so they look structural
               rotateX: 45 + (i * 15),
               rotateY: 20 - (i * 10),
             }}
@@ -62,11 +65,11 @@ export default function Timeline() {
           />
         ))}
 
-        {/* Optional light overlay to ensure it isn't too distracting on light mode */}
+        {/* Light overlay */}
         <div className="absolute inset-0 bg-white/40 dark:bg-black/20 pointer-events-none" />
       </div>
 
-      {/* Cards Layer - Pulled up to overlap sticky background */}
+      {/* Cards Layer */}
       <div className="relative z-10 w-full pb-32 -mt-[100vh] pt-32">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-20 relative">
@@ -100,8 +103,8 @@ export default function Timeline() {
                     )}
                   </div>
 
-                  {/* Content Side with 3D Float Effect */}
-                  <div className="md:w-1/2 md:px-12 ml-6 md:ml-0 group-hover:-translate-y-2 group-hover:rotate-x-2 transition-transform duration-700">
+                  {/* Content Side */}
+                  <div className={`md:w-1/2 ml-6 md:ml-0 group-hover:-translate-y-2 transition-transform duration-700 ${exp.type === 'work' && exp.highlights.length > 0 ? 'md:px-8' : 'md:px-12'}`}>
                     <div
                       className="relative p-8 rounded-[2.5rem] border border-white/60 dark:border-white/10 bg-white/40 dark:bg-black/30 backdrop-blur-3xl hover:bg-white/60 dark:hover:bg-black/50 hover:border-orange-500/50 transition-all duration-500 shadow-[0_8px_32px_rgba(249,115,22,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)] overflow-hidden text-left"
                     >
@@ -111,13 +114,46 @@ export default function Timeline() {
                       {/* Glass Sheen Reflection */}
                       <div className="absolute -inset-[100%] bg-gradient-to-r from-transparent via-white/40 dark:via-white/5 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none" />
 
-                      <span className="relative text-orange-600 dark:text-orange-500 text-[11px] font-black tracking-widest uppercase mb-3 block drop-shadow-sm">
-                        {exp.period}
-                      </span>
+                      {/* Period & Location Badges */}
+                      <div className="relative flex flex-wrap items-center gap-2 mb-4">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 text-[11px] font-bold tracking-wide">
+                          <Calendar className="w-3 h-3" />
+                          {exp.period}
+                        </span>
+                        {exp.location && (
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100/80 dark:bg-white/5 text-slate-600 dark:text-zinc-400 text-[11px] font-bold tracking-wide">
+                            <MapPin className="w-3 h-3" />
+                            {exp.location}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Role & Company */}
                       <h4 className="relative text-2xl font-black mb-1 text-slate-800 dark:text-white drop-shadow-sm">{exp.role}</h4>
                       <div className="relative text-slate-600 dark:text-zinc-300 font-bold mb-4 drop-shadow-sm">{exp.company}</div>
+
+                      {/* Description */}
                       {exp.description && (
-                        <p className="relative text-slate-500 dark:text-zinc-400 text-sm leading-relaxed font-medium">{exp.description}</p>
+                        <p className="relative text-slate-500 dark:text-zinc-400 text-sm leading-relaxed font-medium mb-4">{exp.description}</p>
+                      )}
+
+                      {/* Highlights / Bullet Points */}
+                      {exp.highlights.length > 0 && (
+                        <ul className="relative space-y-3 mt-4">
+                          {exp.highlights.map((highlight, hIdx) => (
+                            <motion.li
+                              key={hIdx}
+                              initial={{ opacity: 0, x: -16 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 0.4, delay: 0.15 * hIdx }}
+                              className="flex items-start gap-2.5 text-sm text-slate-600 dark:text-zinc-400 leading-relaxed group/item"
+                            >
+                              <ChevronRight className="w-4 h-4 mt-0.5 text-orange-500 dark:text-orange-400 flex-shrink-0 group-hover/item:translate-x-0.5 transition-transform duration-300" />
+                              <span className="font-medium">{highlight}</span>
+                            </motion.li>
+                          ))}
+                        </ul>
                       )}
                     </div>
                   </div>
@@ -133,4 +169,3 @@ export default function Timeline() {
     </section>
   );
 }
-

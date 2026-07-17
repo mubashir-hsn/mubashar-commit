@@ -86,7 +86,7 @@ const Skills = () => {
           <div className="relative z-10 px-6 sm:px-12 md:px-20 py-16 md:py-24 flex flex-col items-center text-center gap-10">
             {/* Glowing Badge */}
             <div className="px-5 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm">
-              <span className="text-orange-400 text-[10px] font-black uppercase tracking-[0.35em]">🚀 Always Learning</span>
+              <span className="text-orange-400 text-[10px] font-black uppercase tracking-[0.35em]">Always Learning</span>
             </div>
 
             {/* Main Heading */}
@@ -103,7 +103,7 @@ const Skills = () => {
             {/* Stats Row */}
             <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-4">
               {[
-                { value: '11+', label: 'Projects Built' },
+                { value: '10+', label: 'Projects Built' },
                 { value: '1+', label: 'Years Experience' },
                 { value: '10+', label: 'Technologies' },
               ].map((stat) => (

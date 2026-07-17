@@ -166,7 +166,7 @@ const Contact = () => {
                     className="peer w-full px-0 py-3 bg-transparent border-b-2 border-slate-100 dark:border-zinc-800 focus:border-orange-500 dark:focus:border-orange-500 focus:outline-none transition-all text-slate-900 dark:text-white font-bold placeholder-transparent"
                     placeholder="Full Name"
                   />
-                  <label htmlFor="name" className="absolute left-0 -top-3.5 text-[10px] font-black text-slate-400 dark:text-zinc-500 uppercase tracking-widest transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-300 dark:peer-placeholder-shown:text-zinc-700 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-orange-500">Legal Name</label>
+                  <label htmlFor="name" className="absolute left-0 -top-3.5 text-[10px] font-black text-slate-400 dark:text-zinc-500 uppercase tracking-widest transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-300 dark:peer-placeholder-shown:text-zinc-700 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-orange-500">Full Name</label>
                   {errors.name && <p className="text-red-600 text-[9px] mt-1 font-black uppercase">{errors.name}</p>}
                 </div>
 
@@ -209,7 +209,7 @@ const Contact = () => {
                   className="peer w-full px-0 py-3 bg-transparent border-b-2 border-slate-100 dark:border-zinc-800 focus:border-orange-500 dark:focus:border-orange-500 focus:outline-none transition-all text-slate-900 dark:text-white font-bold placeholder-transparent resize-none"
                   placeholder="Share the details..."
                 ></textarea>
-                <label htmlFor="message" className="absolute left-0 -top-3.5 text-[10px] font-black text-slate-400 dark:text-zinc-500 uppercase tracking-widest transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-300 dark:peer-placeholder-shown:text-zinc-700 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-orange-500">Project Mission</label>
+                <label htmlFor="message" className="absolute left-0 -top-3.5 text-[10px] font-black text-slate-400 dark:text-zinc-500 uppercase tracking-widest transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-300 dark:peer-placeholder-shown:text-zinc-700 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-orange-500">Message</label>
                 {errors.message && <p className="text-red-600 text-[9px] mt-1 font-black uppercase">{errors.message}</p>}
               </div>
 
